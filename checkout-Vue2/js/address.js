@@ -77,6 +77,9 @@ new Vue({
                 this.editIndex = index; //将当前位置值赋值给被编辑位置，方便点击保存时取值
                 this.editWay = 0;   //判断编辑方式传递给下一操作（是编辑而非新增）
             } else {    //如果是添加卡片，则内容置空，addressId递增
+                this.newAddress.userName = "";
+                this.newAddress.streetName = "";
+                this.newAddress.tel = "";
                 var length = this.addressList.length - 1,
                     lastAddress = this.addressList[length];
                 this.newAddress.addressId = lastAddress.addressId + 1;
